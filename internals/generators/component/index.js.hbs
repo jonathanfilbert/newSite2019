@@ -1,16 +1,18 @@
 /**
- *
- * {{ properCase name }}
- *
- */
+*
+* {{ properCase name }}
+*
+*/
 
 {{#if memo}}
 import React, { memo } from 'react';
 {{else}}
 import React from 'react';
 {{/if}}
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
+import PropTypes from 'prop-types';
+{{#if wantStyleJs}}
+import { {{ properCase name }}Container } from './style';
+{{/if}}
 
 {{#if wantMessages}}
 import { FormattedMessage } from 'react-intl';
@@ -18,13 +20,19 @@ import messages from './messages';
 {{/if}}
 
 function {{ properCase name }}() {
-  return (
-    <div>
-    {{#if wantMessages}}
-      <FormattedMessage {...messages.header} />
-    {{/if}}
-    </div>
-  );
+return (
+{{#if wantStyleJs}}
+<{{ properCase name }}Container>
+  {/*Todo : Create {{ properCase name }}*/}
+</{{ properCase name }}Container>
+{{else}}
+<div>
+  {{#if wantMessages}}
+  <FormattedMessage {...messages.header} />
+  {{/if}}
+</div>
+{{/if}}
+);
 }
 
 {{ properCase name }}.propTypes = {};

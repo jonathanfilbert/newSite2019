@@ -6,14 +6,8 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-
-import messages from './messages';
+import TemporaryErrorMessage from 'components/TemporaryErrorMessage';
 
 export default function NotFound() {
-  return (
-    <h1>
-      <FormattedMessage {...messages.header} />
-    </h1>
-  );
+  return <TemporaryErrorMessage />;
 }

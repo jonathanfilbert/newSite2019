@@ -44,9 +44,16 @@ module.exports = {
       default: false,
       message: 'Do you want to load the component asynchronously?',
     },
+    {
+      type: "confirm",
+      name: "wantStyleJs",
+      default: true,
+      message: "Do you need style.js?"
+    }
   ],
   actions: data => {
     // Generate index.js and index.test.js
+    const styleTemplate = "./component/style.js.hbs";
     const actions = [
       {
         type: 'add',
@@ -61,6 +68,16 @@ module.exports = {
         abortOnFail: true,
       },
     ];
+
+    // If the user wants style.js
+    if (data.wantStyleJs) {
+      actions.push({
+        type: "add",
+        path: "../../app/components/{{properCase name}}/style.js",
+        templateFile: styleTemplate,
+        abortOnFail: true
+      });
+    }
 
     // If the user wants i18n messages
     if (data.wantMessages) {
