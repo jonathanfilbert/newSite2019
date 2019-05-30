@@ -19,11 +19,19 @@ import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 {{/if}}
 
-function {{ properCase name }}() {
+class {{ properCase name }} extends React.Component {
+constructor(props){
+super(props);
+this.state = {};
+}
+render(){
+
+const { } = this.props;
+
 return (
 {{#if wantStyleJs}}
 <{{ properCase name }}Container>
-  {/*Todo : Create {{ properCase name }}*/}
+  { /* Todo : Create {{ properCase name }} */ }
 </{{ properCase name }}Container>
 {{else}}
 <div>
@@ -32,7 +40,9 @@ return (
   {{/if}}
 </div>
 {{/if}}
+
 );
+}
 }
 
 {{ properCase name }}.propTypes = {};
