@@ -8,12 +8,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { HomeContainer } from './style';
 import Navbar from '../Navbar';
+import HomeSlider from '../HomeSlider';
 
 function Home() {
   return (
     <HomeContainer>
-      <Navbar />
-      <h1>Hello world</h1>
+      <Navbar className="parent" />
+      <HomeSlider />
     </HomeContainer>
   );
 }

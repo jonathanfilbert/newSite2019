@@ -20,51 +20,44 @@ class Navbar extends React.Component {
   }
 
   toggleMenu() {
-    console.log('triggered!');
-    console.log(this.state.toggled);
-    if (!this.state.toggled) {
-      console.log('masuk');
-      this.setState(state => ({
-        toggled: true,
-        isMenuShown: 'shown',
-      }));
-    } else {
-      this.setState(state => ({
-        toggled: false,
-        isMenuShown: 'shown',
-      }));
-    }
-    console.log(this.state.toggled);
+    this.setState(prevState => ({
+      toggled: !prevState.toggled,
+      isMenuShown: prevState.toggled ? 'hidden' : 'shown',
+    }));
   }
 
   render() {
     const { toggled, isMenuShown } = this.state;
     return (
       <NavbarContainer>
-        <div id="mobile-wrapper" className={isMenuShown}>
-          <div onClick={() => this.toggleMenu()} className="exitContainer">
+        <div className={`mobileWrapper ${isMenuShown}`}>
+          <div onClick={this.toggleMenu} className="exitContainer">
             <CloseButton />
           </div>
           <div className="mobileMenuItems">
             <NavbarLink
+              tipe="mobile"
               className="mobileNavigationItems"
               color="leftMenu"
               text="About"
               link="#"
             />
             <NavbarLink
+              tipe="mobile"
               className="mobileNavigationItems"
               color="leftMenu"
               text="Resume"
               link="#"
             />
             <NavbarLink
+              tipe="mobile"
               className="mobileNavigationItems"
               color="leftMenu"
               text="Projects"
               link="#"
             />
             <NavbarLink
+              tipe="mobile"
               className="mobileNavigationItems"
               color="leftMenu"
               text="Blog"
@@ -72,41 +65,40 @@ class Navbar extends React.Component {
             />
           </div>
         </div>
-        <div className="flex-wrapper">
-          <NavbarLink
-            id="logomain"
-            color="main"
-            text="Jonathan Filbert"
-            link="#"
-          />
+        <div className={!toggled ? 'flex-wrapper' : 'hidden'}>
+          <div id="logomain">Jonathan Filbert</div>
           <div className="spacer" />
           <div className="navigationMenu">
             <NavbarLink
+              tipe="desktop"
               className="navigationItems"
               color="leftMenu"
               text="About"
               link="#"
             />
             <NavbarLink
+              tipe="desktop"
               className="navigationItems"
               color="leftMenu"
               text="Resume"
               link="#"
             />
             <NavbarLink
+              tipe="desktop"
               className="navigationItems"
               color="leftMenu"
               text="Projects"
               link="#"
             />
             <NavbarLink
+              tipe="desktop"
               className="navigationItems"
               color="leftMenu"
               text="Blog"
               link="#"
             />
           </div>
-          <div onClick={() => this.toggleMenu()} className="burgerContainer">
+          <div onClick={this.toggleMenu} className="burgerContainer">
             <Hamburger id="hamburgerStyle" />
           </div>
         </div>

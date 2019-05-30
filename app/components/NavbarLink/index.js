@@ -11,10 +11,10 @@ import { NavbarLinkContainer } from './style';
 
 class NavbarLink extends React.Component {
   render() {
-    const { text, link, color } = this.props;
+    const { text, link, color, tipe } = this.props;
     return (
       <NavbarLinkContainer>
-        <a className={color} href={link}>
+        <a className={(tipe, color)} href={link}>
           {text}
         </a>
       </NavbarLinkContainer>
@@ -25,6 +25,7 @@ class NavbarLink extends React.Component {
 NavbarLink.propTypes = {
   text: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  tipe: PropTypes.string.isRequired,
 };
 
 export default NavbarLink;

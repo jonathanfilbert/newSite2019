@@ -4,6 +4,14 @@ export const NavbarLinkContainer = styled.div`
   font-family: 'Open Sans';
   font-weight: 400;
   font-size: 1.2em;
+  padding-left: 1em;
+  .mobile {
+    text-decoration: none;
+  }
+  .desktop {
+    margin-right: 1em;
+    text-decoration: none;
+  }
   .main {
     color: black;
     text-decoration: none;
