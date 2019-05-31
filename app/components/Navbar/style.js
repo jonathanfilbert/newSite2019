@@ -83,4 +83,17 @@ export const NavbarContainer = styled.div`
       display: block;
     }
   }
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #bcbcbc;
+  }
+  a:hover {
+    color: black;
+    transition: 0.5s;
+  }
+  a:active {
+    color: black;
+    transition: 0.5s;
+  }
 `;

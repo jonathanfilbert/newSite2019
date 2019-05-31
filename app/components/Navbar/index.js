@@ -42,28 +42,28 @@ class Navbar extends React.Component {
           <div className="mobileMenuItems">
             <NavbarLink
               tipe="mobile"
-              className="mobileNavigationItems"
+              className="mobileNavigationItems about"
               color="leftMenu"
               text="About"
               link="/about"
             />
             <NavbarLink
               tipe="mobile"
-              className="mobileNavigationItems"
+              className="mobileNavigationItems resume"
               color="leftMenu"
               text="Resume"
               link="#"
             />
             <NavbarLink
               tipe="mobile"
-              className="mobileNavigationItems"
+              className="mobileNavigationItems projects"
               color="leftMenu"
               text="Projects"
               link="/projects"
             />
             <NavbarLink
               tipe="mobile"
-              className="mobileNavigationItems"
+              className="mobileNavigationItems blog"
               color="leftMenu"
               text="Blog"
               link="#"
@@ -78,29 +78,25 @@ class Navbar extends React.Component {
           <div className="navigationMenu">
             <NavbarLink
               tipe="desktop"
-              className="navigationItems"
-              color="leftMenu"
+              className="navigationItems aboutClass"
               text="About"
               link="/about"
             />
             <NavbarLink
               tipe="desktop"
-              className="navigationItems"
-              color="leftMenu"
+              className="navigationItems resume"
               text="Resume"
               link="#"
             />
             <NavbarLink
               tipe="desktop"
-              className="navigationItems"
-              color="leftMenu"
+              className="navigationItems projects"
               text="Projects"
               link="/projects"
             />
             <NavbarLink
               tipe="desktop"
-              className="navigationItems"
-              color="leftMenu"
+              className="navigationItems blog"
               text="Blog"
               link="#"
             />

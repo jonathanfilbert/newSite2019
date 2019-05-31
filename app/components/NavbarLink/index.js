@@ -11,10 +11,10 @@ import { NavbarLinkContainer } from './style';
 
 class NavbarLink extends React.Component {
   render() {
-    const { text, link, color, tipe } = this.props;
+    const { text, link, tipe } = this.props;
     return (
       <NavbarLinkContainer>
-        <a className={(tipe, color)} href={link}>
+        <a className={tipe} href={link}>
           {text}
         </a>
       </NavbarLinkContainer>
