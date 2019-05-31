@@ -1,6 +1,6 @@
 /**
  *
- * Tests for AboutPage
+ * Tests for About
  *
  * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
  *
@@ -10,13 +10,12 @@ import React from 'react';
 import { render } from 'react-testing-library';
 // import 'jest-dom/extend-expect'; // add some helpful assertions
 
-import { AboutPage } from '../index';
+import About from '../index';
 
-describe('<AboutPage />', () => {
+describe('<About />', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    const dispatch = jest.fn();
-    render(<AboutPage dispatch={dispatch} />);
+    render(<About />);
     expect(spy).not.toHaveBeenCalled();
   });
 
@@ -32,7 +31,7 @@ describe('<AboutPage />', () => {
   it.skip('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(<AboutPage />);
+    } = render(<About />);
     expect(firstChild).toMatchSnapshot();
   });
 });

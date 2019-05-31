@@ -11,6 +11,8 @@ export const NavbarContainer = styled.div`
     font-weight: 400;
     font-size: 1.5rem;
     padding: 0 !important;
+    text-decoration: none;
+    color: black;
   }
   .mobileMenuItems {
     display: flex;

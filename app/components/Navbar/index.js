@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /**
  *
  * Navbar
@@ -5,7 +6,6 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import NavbarLink from 'components/NavbarLink';
 import Hamburger from 'components/Hamburger';
 import CloseButton from 'components/CloseButton';
@@ -31,7 +31,12 @@ class Navbar extends React.Component {
     return (
       <NavbarContainer>
         <div className={`mobileWrapper ${isMenuShown}`}>
-          <div onClick={this.toggleMenu} className="exitContainer">
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={this.toggleMenu}
+            className="exitContainer"
+          >
             <CloseButton />
           </div>
           <div className="mobileMenuItems">
@@ -40,7 +45,7 @@ class Navbar extends React.Component {
               className="mobileNavigationItems"
               color="leftMenu"
               text="About"
-              link="#"
+              link="/about"
             />
             <NavbarLink
               tipe="mobile"
@@ -54,7 +59,7 @@ class Navbar extends React.Component {
               className="mobileNavigationItems"
               color="leftMenu"
               text="Projects"
-              link="#"
+              link="/projects"
             />
             <NavbarLink
               tipe="mobile"
@@ -66,7 +71,9 @@ class Navbar extends React.Component {
           </div>
         </div>
         <div className={!toggled ? 'flex-wrapper' : 'hidden'}>
-          <div id="logomain">Jonathan Filbert</div>
+          <a id="logomain" href="/">
+            <div>Jonathan Filbert</div>
+          </a>
           <div className="spacer" />
           <div className="navigationMenu">
             <NavbarLink
@@ -74,7 +81,7 @@ class Navbar extends React.Component {
               className="navigationItems"
               color="leftMenu"
               text="About"
-              link="#"
+              link="/about"
             />
             <NavbarLink
               tipe="desktop"
@@ -88,7 +95,7 @@ class Navbar extends React.Component {
               className="navigationItems"
               color="leftMenu"
               text="Projects"
-              link="#"
+              link="/projects"
             />
             <NavbarLink
               tipe="desktop"
@@ -98,7 +105,12 @@ class Navbar extends React.Component {
               link="#"
             />
           </div>
-          <div onClick={this.toggleMenu} className="burgerContainer">
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={this.toggleMenu}
+            className="burgerContainer"
+          >
             <Hamburger id="hamburgerStyle" />
           </div>
         </div>
@@ -106,7 +118,5 @@ class Navbar extends React.Component {
     );
   }
 }
-
-Navbar.propTypes = {};
 
 export default Navbar;
