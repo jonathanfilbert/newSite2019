@@ -61,12 +61,6 @@ module.exports = {
         templateFile: './component/index.js.hbs',
         abortOnFail: true,
       },
-      {
-        type: 'add',
-        path: '../../app/components/{{properCase name}}/tests/index.test.js',
-        templateFile: './component/test.js.hbs',
-        abortOnFail: true,
-      },
     ];
 
     // If the user wants style.js

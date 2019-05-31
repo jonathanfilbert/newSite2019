@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import AboutText from 'components/AboutText';
 import { AboutContainer } from './style';
 
 class About extends React.Component {
@@ -17,7 +18,7 @@ class About extends React.Component {
     return (
       <AboutContainer>
         <div>
-          <h1>About Page</h1>
+          <AboutText />
         </div>
       </AboutContainer>
     );
