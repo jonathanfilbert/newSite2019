@@ -8,8 +8,8 @@ This site is being built and deployed continuously using Netlify, the current st
 ## Quick start
 
 1.  Make sure that you have Node.js v8.15.1 and npm v5 or above installed.
-2.  Clone this repo using `git clone --depth=1 https://github.com/react-boilerplate/react-boilerplate.git <YOUR_PROJECT_NAME>`
-3.  Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`.<br />
+2.  Clone this repo using `git clone`
+3.  Move to the appropriate directory: `cd `.<br />
 4. Run `npm install`
 5. Run `npm start`
 
