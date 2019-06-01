@@ -53,6 +53,7 @@ export const NavbarContainer = styled.div`
   }
 
   .mobileWrapper {
+    overflow: hidden;
     background: white;
     display: flex;
     align-items: center;
@@ -60,7 +61,6 @@ export const NavbarContainer = styled.div`
     height: 100vh;
     flex-direction: column;
     justify-content: space-around;
-    overflow: hidden;
   }
   @media only screen and (max-width: 577px) {
     .navigationMenu {

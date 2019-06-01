@@ -13,7 +13,6 @@ import {
   faMedium,
 } from '@fortawesome/free-brands-svg-icons';
 import { FooterContainer } from './style';
-import StickyFooter from 'react-sticky-footer';
 class Footer extends React.Component {
   constructor(props) {
     super(props);
