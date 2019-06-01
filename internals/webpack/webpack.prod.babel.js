@@ -167,7 +167,6 @@ module.exports = require('./webpack.base.babel')({
           type: 'image/png',
         },
       ],
-      splash_pages: null,
     }),
 
     new HashedModuleIdsPlugin({
