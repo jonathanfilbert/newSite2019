@@ -66,8 +66,8 @@ class AboutText extends React.Component {
                 target="_blank"
                 className="link"
               >
-                <u>book-borrowing web application </u>
-              </a>
+                <u>book-borrowing web application</u>
+              </a>{' '}
               and part of the UI design team for an{' '}
               <a href="https://compfest.id" target="_blank" className="link">
                 <u>event website</u>.

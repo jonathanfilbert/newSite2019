@@ -60,6 +60,7 @@ export const FooterContainer = styled.div`
     }
     .socialWrapper {
       padding: 0;
+      padding-bottom: 1em;
     }
     .footerText {
       margin-left: 0;

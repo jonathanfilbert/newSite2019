@@ -21,8 +21,10 @@ export const AboutTextContainer = styled.div`
     padding-bottom: 3em;
   }
   .link {
-    text-decoration: none;
     color: black;
+  }
+  .link:hover {
+    color: #00ab6c;
   }
   @media only screen and (max-width: 1125px) {
     .aboutContainer {
