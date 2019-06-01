@@ -2,39 +2,68 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.div`
   bottom: 0;
-  background: yellow;
+  background: #fcfcfc;
   position: relative;
   width: 100%;
+  .socialWrapper {
+    padding-left: 1em;
+  }
+  .separator {
+    display: flex;
+    flex: 1;
+  }
   .footerWrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    flex-shrink: 1;
-    padding-bottom: 1em;
-    padding-top: 1em;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    z-index: 0;
+    flex-shrink: 0;
   }
   .footerText {
     font-family: 'Open Sans';
     color: black;
+    font-weight: 700;
     font-size: 0.9em;
+    padding-right: 1em;
   }
   .brandIcons {
-    padding-left: 0.3em;
+    margin-left: 0.9em;
     font-size: 2em;
+    cursor: pointer;
+    color: black;
   }
   #twitter:hover {
     color: #1da1f2;
   }
   #ig:hover {
-    background: -webkit-radial-gradient(
-      circle at 30% 107%,
-      #fdf497 0%,
-      #fdf497 5%,
-      #fd5949 45%,
-      #d6249f 60%,
-      #285aeb 90%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #405de6;
+  }
+  #drib:hover {
+    color: #ea4c89;
+  }
+  #med:hover {
+    color: #00ab6c;
+  }
+  @media only screen and (max-width: 443px) {
+    .footerWrapper {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .brandIcons {
+      font-size: 1em;
+    }
+    .separator {
+      flex: 0;
+    }
+    .socialWrapper {
+      padding: 0;
+    }
+    .footerText {
+      margin-left: 0;
+      padding-right: 0;
+    }
   }
 `;

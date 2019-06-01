@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    display: flex;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 

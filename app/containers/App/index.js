@@ -14,11 +14,13 @@ export default function App() {
     <div>
       <Router>
         <Route component={Navbar} />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route component={NotFoundPage} />?
-        </Switch>
+        <div style={{ minHeight: '100vh' }}>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route component={NotFoundPage} />?
+          </Switch>
+        </div>
       </Router>
       <Footer />
       <GlobalStyle />
