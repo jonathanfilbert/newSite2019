@@ -1,3 +1,6 @@
+<img src="https://david-dm.org/jonathanfilbert/newSite2019.svg"/> [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/)    
+
+
 ## Status
 This site is being built and deployed continuously using Netlify, the current status of the build is: <br/>
 [![Netlify Status](https://api.netlify.com/api/v1/badges/df7fc4e0-8966-43f2-a362-58ad0730cd4e/deploy-status)](https://app.netlify.com/sites/determined-kilby-16929d/deploys)
