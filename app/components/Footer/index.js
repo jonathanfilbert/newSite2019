@@ -11,6 +11,7 @@ import {
   faInstagram,
   faDribbble,
   faMedium,
+  faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 import { FooterContainer } from './style';
 class Footer extends React.Component {
@@ -53,6 +54,13 @@ class Footer extends React.Component {
                 id="med"
                 className="brandIcons"
                 icon={faMedium}
+              />
+            </a>
+            <a href="https://medium.com/@jonathanflisyanto" target="_blank">
+              <FontAwesomeIcon
+                id="in"
+                className="brandIcons"
+                icon={faLinkedin}
               />
             </a>
           </div>

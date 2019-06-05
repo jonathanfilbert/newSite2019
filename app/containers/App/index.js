@@ -14,7 +14,7 @@ export default function App() {
     <div>
       <Router>
         <Route component={Navbar} />
-        <div style={{ minHeight: '100vh' }}>
+        <div className="haha" style={{ minHeight: '100vh' }}>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />

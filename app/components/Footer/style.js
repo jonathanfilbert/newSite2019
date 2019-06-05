@@ -46,6 +46,9 @@ export const FooterContainer = styled.div`
   #med:hover {
     color: #00ab6c;
   }
+  #in:hover {
+    color: #0077b5;
+  }
   @media only screen and (max-width: 443px) {
     .footerWrapper {
       flex-direction: column;
@@ -53,14 +56,17 @@ export const FooterContainer = styled.div`
       text-align: center;
     }
     .brandIcons {
-      font-size: 1em;
+      font-size: 1.6em;
+      margin-left: 0;
+      margin: 0.3em;
     }
     .separator {
       flex: 0;
     }
     .socialWrapper {
-      padding: 0;
       padding-bottom: 1em;
+      text-align: center;
+      padding-left: 0em;
     }
     .footerText {
       margin-left: 0;

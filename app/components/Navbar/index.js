@@ -9,9 +9,9 @@ import React from 'react';
 import NavbarLink from 'components/NavbarLink';
 import Hamburger from 'components/Hamburger';
 import CloseButton from 'components/CloseButton';
+import { connect } from 'react-redux';
 import { NavbarContainer } from './style';
-
-// eslint-disable-next-line react/prefer-stateless-function
+import toggleMenu from '../../actions/toggleAction';
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -115,4 +115,7 @@ class Navbar extends React.Component {
   }
 }
 
-export default Navbar;
+export default connect(
+  null,
+  { toggleMenu },
+)(Navbar);
