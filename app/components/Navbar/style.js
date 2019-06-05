@@ -59,6 +59,7 @@ export const NavbarContainer = styled.div`
     align-items: center;
     position: absolute;
     height: 100vh;
+    z-index: 100;
     flex-direction: column;
     justify-content: space-around;
   }
