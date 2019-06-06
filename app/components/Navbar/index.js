@@ -6,12 +6,13 @@
  */
 
 import React from 'react';
+
 import NavbarLink from 'components/NavbarLink';
 import Hamburger from 'components/Hamburger';
 import CloseButton from 'components/CloseButton';
 import { connect } from 'react-redux';
 import { NavbarContainer } from './style';
-import toggleMenu from '../../actions/toggleAction';
+import { toggleMenu } from '../../actions/toggleAction';
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +25,8 @@ class Navbar extends React.Component {
       toggled: !prevState.toggled,
       isMenuShown: prevState.toggled ? 'hidden' : 'shown',
     }));
+    // eslint-disable-next-line react/prop-types
+    this.props.toggleMenu();
   }
 
   render() {
@@ -115,7 +118,13 @@ class Navbar extends React.Component {
   }
 }
 
+function mapDispatchToProps(dispatch) {
+  return {
+    toggleMenu: () => dispatch(toggleMenu()),
+  };
+}
+
 export default connect(
   null,
-  { toggleMenu },
+  mapDispatchToProps,
 )(Navbar);

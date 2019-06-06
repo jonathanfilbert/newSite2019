@@ -1,20 +1,19 @@
-const toggleReducer = (
-  state = {
-    toggled: false,
-  },
-  action,
-) => {
+const initialState = {
+  toggled: false,
+};
+const toggleReducer = (state = initialState, action) => {
+  console.log('masuk reducer');
+  console.log(action.type);
+  console.log(state);
   switch (action.type) {
     case 'TOGGLE_MENU':
-      // eslint-disable-next-line no-param-reassign
-      state = {
+      return {
         ...state,
         toggled: !state.toggled,
       };
-      break;
     default:
+      return state;
   }
-  return state;
 };
 
 export default toggleReducer;
