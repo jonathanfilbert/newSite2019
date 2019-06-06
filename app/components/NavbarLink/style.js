@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const NavbarLinkContainer = styled.div`
-  font-family: 'Open Sans';
-  font-weight: 400;
+  font-family: 'Helvetica';
+  font-weight: normal;
   font-size: 1.2em;
   .mobile {
     padding-bottom: 1em;

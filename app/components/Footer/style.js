@@ -16,23 +16,25 @@ export const FooterContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    vertical-align: center;
     padding-bottom: 2em;
     padding-top: 2em;
     z-index: 0;
     flex-shrink: 0;
   }
   .footerText {
-    font-family: 'Open Sans';
-    color: black;
-    font-weight: 700;
-    font-size: 0.9em;
+    font-family: 'Helvetica';
+    color: #212121;
+    font-weight: bold;
+    font-size: 1.2em;
     padding-right: 1em;
+    text-align: right;
   }
   .brandIcons {
     margin-left: 0.9em;
     font-size: 2em;
     cursor: pointer;
-    color: black;
+    color: #212121;
   }
   #twitter:hover {
     color: #1da1f2;
@@ -49,7 +51,7 @@ export const FooterContainer = styled.div`
   #in:hover {
     color: #0077b5;
   }
-  @media only screen and (max-width: 443px) {
+  @media only screen and (max-width: 512px) {
     .footerWrapper {
       flex-direction: column;
       align-items: center;
@@ -71,6 +73,7 @@ export const FooterContainer = styled.div`
     .footerText {
       margin-left: 0;
       padding-right: 0;
+      text-align: center;
     }
   }
 `;

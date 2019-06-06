@@ -4,12 +4,12 @@
  *
  */
 
-import React, { Suspense, lazy } from 'react';
-import PropTypes from 'prop-types';
-import { SliderContainer } from './style';
+import React from 'react';
 import axios from 'axios';
+import Slider from 'react-slick';
+import { SliderContainer } from './style';
 
-class Slider extends React.Component {
+class SliderComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,7 +21,9 @@ class Slider extends React.Component {
     axios
       .get('https://dementorjofil.herokuapp.com/get-porto-details/')
       .then(response => {
-        console.log(response['data']);
+        this.setState({
+          porto: response.data,
+        });
       });
   }
 
@@ -29,13 +31,29 @@ class Slider extends React.Component {
     return (
       <SliderContainer>
         <div>
-          <h1>HEllo World</h1>
+          <div className="sliderContainer">
+            <Slider
+              autoPlay
+              centerPadding="40px"
+              speed={100}
+              slidesToShow={1}
+              slidesToScroll={1}
+              infinite
+              lazyLoad="progressive"
+              dots
+            >
+              {this.state.porto.map(portos => (
+                <div key={portos.image} className="imageContainer">
+                  <img alt={portos.title} src={portos.image} />
+                  {portos.title}
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
       </SliderContainer>
     );
   }
 }
 
-Slider.propTypes = {};
-
-export default Slider;
+export default SliderComponent;

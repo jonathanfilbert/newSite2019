@@ -2,17 +2,19 @@ import styled from 'styled-components';
 
 export const AboutTextContainer = styled.div`
   .titleText {
-    font-family: 'Open Sans';
+    font-family: 'Helvetica';
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: bold;
     text-align: left;
+    color: #212121;
   }
   .normalText {
-    font-family: 'Open Sans';
+    font-family: 'Helvetica';
     font-size: 1em;
-    font-weight: 400;
+    font-weight: normal;
     padding-bottom: 1.5em;
     padding-top: 1em;
+    color: #212121;
   }
   .aboutContainer {
     padding-left: 30em;

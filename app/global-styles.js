@@ -1,6 +1,24 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+  @font-face{
+    font-family:'Helvetica';
+    src: url('./assets/fonts/Helvetica-Bold.ttf') format('truetype');
+    font-weight:bold;
+    font-style:normal;
+  }
+  @font-face{
+    font-family:'Helvetica';
+    src: url('./assets/fonts/Helvetica-Light.ttf') format('truetype');
+    font-weight:lighter;
+    font-style:normal;
+  }
+  @font-face{
+    font-family:'Helvetica';
+    src: url('./assets/fonts/Helvetica.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+  }
   html,
   body {
     height: 100%;

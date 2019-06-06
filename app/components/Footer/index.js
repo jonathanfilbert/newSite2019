@@ -65,7 +65,10 @@ class Footer extends React.Component {
             </a>
           </div>
           <div className="separator" />
-          <div className="footerText">c/o Jonathan Filbert 2019</div>
+          <div className="footerText">
+            <div>c/o Jonathan Filbert</div>
+            <div>JUNE 2019</div>
+          </div>
         </div>
       </FooterContainer>
     );

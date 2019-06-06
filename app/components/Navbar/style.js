@@ -7,12 +7,12 @@ export const NavbarContainer = styled.div`
     transition: 0.3s;
   }
   #logomain {
-    font-family: 'Open Sans';
-    font-weight: 400;
+    font-family: 'Helvetica';
+    font-weight: bold;
     font-size: 1.5rem;
     padding: 0 !important;
     text-decoration: none;
-    color: black;
+    color: #212121;
   }
   .mobileMenuItems {
     display: flex;
