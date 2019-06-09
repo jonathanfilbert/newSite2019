@@ -56,7 +56,10 @@ class Footer extends React.Component {
                 icon={faMedium}
               />
             </a>
-            <a href="https://medium.com/@jonathanflisyanto" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/jonathanflisyanto/"
+              target="_blank"
+            >
               <FontAwesomeIcon
                 id="in"
                 className="brandIcons"
@@ -67,7 +70,7 @@ class Footer extends React.Component {
           <div className="separator" />
           <div className="footerText">
             <div>c/o Jonathan Filbert</div>
-            <div>JUNE 2019</div>
+            <div>A WEBSITE</div>
           </div>
         </div>
       </FooterContainer>

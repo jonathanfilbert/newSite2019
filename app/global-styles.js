@@ -47,6 +47,12 @@ const GlobalStyle = createGlobalStyle`
 
   .hidden{
     display:none;
+    top:100vh;
+    transition:0.3s;
+  }
+  .shown{
+    top:0;
+    transition:0.3s;
   }
 `;
 

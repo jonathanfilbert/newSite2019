@@ -33,19 +33,27 @@ class SliderComponent extends React.Component {
         <div>
           <div className="sliderContainer">
             <Slider
-              autoPlay
-              centerPadding="40px"
-              speed={100}
+              autoplay
+              draggable
+              swipeToSlide
+              speed={300}
               slidesToShow={1}
               slidesToScroll={1}
               infinite
-              lazyLoad="progressive"
-              dots
             >
               {this.state.porto.map(portos => (
                 <div key={portos.image} className="imageContainer">
-                  <img alt={portos.title} src={portos.image} />
-                  {portos.title}
+                  <img
+                    alt={portos.title}
+                    className="slideImage"
+                    src={portos.image}
+                  />
+                  <div className="descriptionContainer">
+                    <div className="title">{portos.title.toUpperCase()}</div>
+                    <div className="description">
+                      <i>{portos.short_description}</i>
+                    </div>
+                  </div>
                 </div>
               ))}
             </Slider>

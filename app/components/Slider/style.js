@@ -2,15 +2,23 @@ import styled from 'styled-components';
 
 export const SliderContainer = styled.div`
   .sliderContainer {
-    height: 50%;
-    width: 100%;
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 2em;
   }
-  .imageContainer {
-    padding-right: 10em;
-    padding-left: 10em;
-    padding-top: 10em;
-    padding-bottom: 10em;
-    margin: 0;
-    width: 50%;
+  .slideImage {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+  }
+  .descriptionContainer {
+    padding-top: 1em;
+    font-family: 'Helvetica';
+    font-size: 1em;
+    text-align: center;
+  }
+  .title {
+    font-weight: bold;
   }
 `;

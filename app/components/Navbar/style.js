@@ -14,6 +14,15 @@ export const NavbarContainer = styled.div`
     text-decoration: none;
     color: #212121;
   }
+  #logomain-mobile {
+    display: none;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0 !important;
+    text-decoration: none;
+    color: #212121;
+  }
   .mobileMenuItems {
     display: flex;
     flex-direction: column;
@@ -36,6 +45,7 @@ export const NavbarContainer = styled.div`
   }
   .hidden {
     display: none;
+    transition: 0.3s;
   }
   .flex-wrapper {
     display: flex;
@@ -64,6 +74,12 @@ export const NavbarContainer = styled.div`
     justify-content: space-around;
   }
   @media only screen and (max-width: 577px) {
+    #logomain-mobile {
+      display: block;
+    }
+    #logomain {
+      display: none;
+    }
     .navigationMenu {
       font-size: 0.7rem;
     }

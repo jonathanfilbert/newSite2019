@@ -29,9 +29,13 @@ class LifeUpdate extends React.Component {
   render() {
     return (
       <LifeUpdateContainer>
-        <div>
+        <div className="updateContainer">
+          <div className="updateTitle">Updates</div>
           {this.state.updates.map(updates => (
-            <h1 key={updates.time}>{updates.update}</h1>
+            <div key={updates.time} className="flexContainer">
+              <div className="updateTime">{updates.time}</div>
+              <div className="updateName">{updates.update}</div>
+            </div>
           ))}
         </div>
       </LifeUpdateContainer>

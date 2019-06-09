@@ -77,6 +77,9 @@ class Navbar extends React.Component {
           <a id="logomain" href="/">
             <div>jonathan filbert</div>
           </a>
+          <a id="logomain-mobile" href="/">
+            <div>jfl.</div>
+          </a>
           <div className="spacer" />
           <div className="navigationMenu">
             <NavbarLink
