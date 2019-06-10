@@ -75,7 +75,7 @@ class Navbar extends React.Component {
         </div>
         <div className={!toggled ? 'flex-wrapper' : 'hidden'}>
           <a id="logomain" href="/">
-            <div>jonathan filbert</div>
+            <div>JONATHAN FILBERT</div>
           </a>
           <a id="logomain-mobile" href="/">
             <div>jfl.</div>

@@ -13,6 +13,7 @@ const Home = lazy(() => import('components/Home'));
 const Navbar = lazy(() => import('components/Navbar'));
 const About = lazy(() => import('components/About'));
 const Footer = lazy(() => import('components/Footer'));
+const ProjectPage = lazy(() => import('../../components/ProjectPage'));
 
 class App extends React.Component {
   constructor(props) {
@@ -33,6 +34,7 @@ class App extends React.Component {
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />
+                <Route exact path="/projects" component={ProjectPage} />
                 <Route component={NotFoundPage} />?
               </Switch>
             </div>

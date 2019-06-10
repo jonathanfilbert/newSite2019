@@ -4,8 +4,10 @@ export const SliderContainer = styled.div`
   .sliderContainer {
     margin-top: 2em;
     margin-left: 1em;
-    margin-right: 1em;
     margin-bottom: 2em;
+    padding-right: 1em;
+    max-width: 100%;
+    max-height: 100%;
   }
   .slideImage {
     max-width: 100%;
