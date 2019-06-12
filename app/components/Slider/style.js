@@ -12,7 +12,8 @@ export const SliderContainer = styled.div`
   .slideImage {
     max-width: 100%;
     max-height: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
   }
   .descriptionContainer {
     padding-top: 1em;
@@ -22,5 +23,8 @@ export const SliderContainer = styled.div`
   }
   .title {
     font-weight: bold;
+  }
+  .slick-arrow {
+    display: none !important;
   }
 `;

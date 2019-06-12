@@ -12,6 +12,7 @@ import {
   faDribbble,
   faMedium,
   faLinkedin,
+  faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 import { FooterContainer } from './style';
 class Footer extends React.Component {
@@ -30,6 +31,13 @@ class Footer extends React.Component {
                 id="twitter"
                 className="brandIcons"
                 icon={faTwitter}
+              />
+            </a>
+            <a href="https://github.com/jonathanfilbert" target="_blank">
+              <FontAwesomeIcon
+                id="github"
+                className="brandIcons"
+                icon={faGithub}
               />
             </a>
             <a

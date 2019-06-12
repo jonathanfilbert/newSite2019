@@ -68,8 +68,15 @@ class Navbar extends React.Component {
               tipe="mobile"
               className="mobileNavigationItems blog"
               color="leftMenu"
-              text="Blog"
+              text="Reading List"
               link="#"
+            />
+            <NavbarLink
+              tipe="mobile"
+              className="mobileNavigationItems blog"
+              color="leftMenu"
+              text="Blog"
+              link="/reading-list"
             />
           </div>
         </div>
@@ -99,6 +106,12 @@ class Navbar extends React.Component {
               className="navigationItems projects"
               text="Projects"
               link="/projects"
+            />
+            <NavbarLink
+              tipe="desktop"
+              className="navigationItems projects"
+              text="Reading List"
+              link="/reading-list"
             />
             <NavbarLink
               tipe="desktop"

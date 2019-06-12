@@ -52,6 +52,9 @@ export const ProjectPageContainer = styled.div`
     border-radius: 0.5em;
   }
   @media only screen and (max-width: 686px) {
+    .description {
+      text-align: left;
+    }
     .imageContainer {
       display: none;
     }

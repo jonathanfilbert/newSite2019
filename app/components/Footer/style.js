@@ -51,6 +51,9 @@ export const FooterContainer = styled.div`
   #in:hover {
     color: #0077b5;
   }
+  #github:hover {
+    color: #4078c0;
+  }
   @media only screen and (max-width: 512px) {
     .footerWrapper {
       flex-direction: column;

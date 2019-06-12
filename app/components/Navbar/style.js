@@ -51,7 +51,7 @@ export const NavbarContainer = styled.div`
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 1rem 1rem;
+    padding: 1em 1em;
     width: 100%;
     top: 0;
     background: white;

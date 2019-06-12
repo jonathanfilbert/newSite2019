@@ -32,7 +32,7 @@ class ProjectPage extends React.Component {
         <div className="WholeContainer">
           {this.state.portos.map(portos => {
             return (
-              <div className="projectContainer">
+              <div key={portos.numberOrder} className="projectContainer">
                 <div className="numberContainer">
                   {portos.numberOrder.toUpperCase()}
                 </div>

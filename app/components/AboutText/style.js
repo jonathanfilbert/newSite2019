@@ -10,8 +10,8 @@ export const AboutTextContainer = styled.div`
   }
   .normalText {
     font-family: 'Helvetica';
-    font-size: 1em;
-    font-weight: normal;
+    font-size: 1.5em;
+    font-weight: lighter;
     padding-bottom: 1.5em;
     padding-top: 1em;
     color: #212121;
@@ -24,9 +24,6 @@ export const AboutTextContainer = styled.div`
   }
   .link {
     color: black;
-  }
-  .link:hover {
-    color: #00ab6c;
   }
   @media only screen and (max-width: 1125px) {
     .aboutContainer {

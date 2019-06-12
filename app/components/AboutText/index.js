@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 /**
  *
  * AboutText
@@ -20,10 +21,11 @@ class AboutText extends React.Component {
           <div className="aboutContainer">
             <div className="titleText">Who...are you?</div>
             <div className="normalText">
-              Who am I? What is the purpose of life? Why are we here? What is
-              life? While these are the questions that I contemplate on every
-              friday evening, to put it simply, I am a <s> wizard, Harry</s>
-              <b> designer </b> who is <i> pretty</i> good with code.
+              Who am I? Why are we here? What is life? While these are the
+              questions that I contemplate on every friday evening, to put it
+              simply, I am a <s> wizard, Harry</s>
+              <b> software engineer </b> who values minimalism and elegance in
+              problem solving in correspondence with my design passion.
             </div>
             <div className="titleText">Where are you studying?</div>
             <div className="normalText">
@@ -53,6 +55,25 @@ class AboutText extends React.Component {
               Less-iced Americano. Usually accompanied with a piece of brownie,
               and an internet connection.
             </div>
+            <div className="titleText">What are your principles in life?</div>
+            <div className="normalText">
+              <div>⭐️ Challenges make progress</div>
+              <div>
+                ⭐️ Being honest and straightforward will take you places
+              </div>
+              <div>⭐️ ️️Learn from mistakes</div>
+              <div>⭐️ Creativity and problem solving are inseparable</div>
+              <div>
+                ⭐️ Design shouldn't be in the way of accessibility and
+                performance
+              </div>
+              <div>⭐️ Teamwork is awesome</div>
+              <div>⭐️ Design and code with scalability in mind</div>
+              <div>
+                ⭐️ <i>Martabak keju campur</i> is the best food known to
+                mankind.
+              </div>
+            </div>
             <div className="titleText">Any cool side projects?</div>
             <div className="normalText">
               Aside from this very website, I have designed and led a group of
@@ -80,7 +101,13 @@ class AboutText extends React.Component {
                 href="https://www.youtube.com/watch?v=-9Hfda6lXcc&t=51s"
                 target="_blank"
               >
-                <u>This.</u>
+                <u>This</u>
+              </a>
+            </div>
+            <div className="normalText ">
+              Still have questions? Feel free to{' '}
+              <a className="link" href="mailto:jonathanflisyanto@gmail.com">
+                reach out
               </a>
             </div>
           </div>
