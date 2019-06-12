@@ -24,7 +24,7 @@ class AboutText extends React.Component {
               Who am I? Why are we here? What is life? While these are the
               questions that I contemplate on every friday evening, to put it
               simply, I am a <s> wizard, Harry</s>
-              <b> software engineer </b> who values minimalism and elegance in
+              <b> web developer </b> who values minimalism and elegance in
               problem solving in correspondence with my design passion.
             </div>
             <div className="titleText">Where are you studying?</div>
@@ -92,7 +92,16 @@ class AboutText extends React.Component {
               and part of the UI design team for an{' '}
               <a href="https://compfest.id" target="_blank" className="link">
                 <u>event website</u>.
+              </a>{' '}
+              Apart from that, currently I'm co-building an open source{' '}
+              <a
+                href="https://github.com/HizkiFW/worshipweb"
+                className="link"
+                target="_blank"
+              >
+                lyric-displayer web application
               </a>
+              .
             </div>
             <div className="titleText">Favourite coding music?</div>
             <div className="normalText">

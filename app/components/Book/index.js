@@ -31,7 +31,7 @@ class Book extends React.Component {
       <BookContainer>
         <div className="bookContainer">
           <div className={status === 'done' ? 'notDone' : 'done'}>
-            <a style={{ color: 'black' }} href={url}>
+            <a style={{ color: 'black' }} href={url} target="_blank">
               {title}
             </a>
           </div>

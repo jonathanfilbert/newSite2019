@@ -16,4 +16,7 @@ export const BookPageContainer = styled.div`
   .titleContainer {
     margin-bottom: 2em;
   }
+  .bookContainer {
+    margin-bottom: 1em;
+  }
 `;
