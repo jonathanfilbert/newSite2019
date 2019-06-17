@@ -55,7 +55,7 @@ class Navbar extends React.Component {
               className="mobileNavigationItems resume"
               color="leftMenu"
               text="Resume"
-              link="#"
+              link="https://drive.google.com/file/d/1ZQt5XV5j1HdK9-wCK6n8lSmOODYdQbi5/view?usp=sharing"
             />
             <NavbarLink
               tipe="mobile"
@@ -99,7 +99,7 @@ class Navbar extends React.Component {
               tipe="desktop"
               className="navigationItems resume"
               text="Resume"
-              link="#"
+              link="https://drive.google.com/file/d/1ZQt5XV5j1HdK9-wCK6n8lSmOODYdQbi5/view?usp=sharing"
             />
             <NavbarLink
               tipe="desktop"
