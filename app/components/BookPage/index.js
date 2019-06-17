@@ -19,7 +19,7 @@ class BookPage extends React.Component {
 
   componentDidMount() {
     axios
-      .get('http://dementorjofil.herokuapp.com/get-book-reviews/')
+      .get('https://dementorjofil.herokuapp.com/get-book-reviews/')
       .then(response => {
         this.setState({
           reviews: response.data,
@@ -50,13 +50,6 @@ class BookPage extends React.Component {
             </div>
           </div>
           <div className="bookContainer">
-            {/* <Book
-              status="done"
-              title="Mockingjay"
-              finishDate="3 January 2019"
-              url="#"
-              notes="Eiusmod enim ea nulla veniam labore. Lorem dolor minim do laboris dolor non ad sint minim. Minim laborum id ut eu cillum enim quis excepteur eu ex culpa aliquip. Consequat duis voluptate quis do ex et. Consequat laborum incididunt eiusmod ullamco labore occaecat exercitation."
-            /> */}
             {this.state.reviews.map(review => (
               <Book
                 key={review.url}
