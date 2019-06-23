@@ -16,6 +16,21 @@ class ProjectPage extends React.Component {
     };
   }
 
+  emojiPicker(category) {
+    switch (category) {
+      case 'Design':
+        return '🎨';
+      case 'Development':
+        return '💻';
+      case 'Social':
+        return '🤝';
+      case 'Leadership':
+        return '✏️';
+      default:
+        return '🤷🏻‍♂️';
+    }
+  }
+
   componentDidMount() {
     axios
       .get('https://dementorjofil.herokuapp.com/get-porto-details/')
@@ -30,11 +45,16 @@ class ProjectPage extends React.Component {
     return (
       <ProjectPageContainer>
         <div className="WholeContainer">
+          <div className="legends">
+            <div>
+              🎨 = Design | 💻 = Development | 🤝 = social | ✏️ = leadership
+            </div>
+          </div>
           {this.state.portos.map(portos => {
             return (
               <div key={portos.numberOrder} className="projectContainer">
                 <div className="numberContainer">
-                  {portos.numberOrder.toUpperCase()}
+                  {this.emojiPicker(portos.category)}
                 </div>
                 <div className="detailContainer">
                   <div className="titleContainer">

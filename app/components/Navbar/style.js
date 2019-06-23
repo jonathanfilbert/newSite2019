@@ -73,6 +73,16 @@ export const NavbarContainer = styled.div`
     flex-direction: column;
     justify-content: space-around;
   }
+  @media only screen and (max-width: 703px) {
+    .navigationMenu {
+      font-size: 0.8rem;
+    }
+  }
+  @media only screen and (max-width: 617px) {
+    .navigationMenu {
+      font-size: 0.6rem;
+    }
+  }
   @media only screen and (max-width: 577px) {
     #logomain-mobile {
       display: block;

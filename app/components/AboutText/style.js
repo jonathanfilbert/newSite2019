@@ -11,7 +11,7 @@ export const AboutTextContainer = styled.div`
   .normalText {
     font-family: 'Helvetica';
     font-size: 1.5em;
-    font-weight: lighter;
+    font-weight: normal;
     padding-bottom: 1.5em;
     padding-top: 1em;
     color: #212121;
@@ -39,14 +39,14 @@ export const AboutTextContainer = styled.div`
   }
   @media only screen and (max-width: 667px) {
     .aboutContainer {
-      padding-left: 8em;
-      padding-right: 8em;
+      padding-left: 2em;
+      padding-right: 2em;
     }
   }
   @media only screen and (max-width: 441px) {
     .aboutContainer {
-      padding-left: 5em;
-      padding-right: 5em;
+      padding-left: 1em;
+      padding-right: 1em;
     }
     .titleText {
       font-size: 1.2em;
@@ -63,8 +63,8 @@ export const AboutTextContainer = styled.div`
       font-size: 0.8em;
     }
     .aboutContainer {
-      padding-left: 3em;
-      padding-right: 3em;
+      padding-left: 1em;
+      padding-right: 1em;
     }
   }
 `;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const BookPageContainer = styled.div`
   font-family: 'Helvetica';
   font-size: 1.5em;
-  font-weight: lighter;
+  font-weight: normal;
   .AllContainer {
     margin-left: 1em;
     margin-right: 1em;

@@ -71,13 +71,6 @@ class Navbar extends React.Component {
               text="Reading List"
               link="/reading-list"
             />
-            <NavbarLink
-              tipe="mobile"
-              className="mobileNavigationItems blog"
-              color="leftMenu"
-              text="Blog"
-              link="#"
-            />
           </div>
         </div>
         <div className={!toggled ? 'flex-wrapper' : 'hidden'}>
@@ -112,12 +105,6 @@ class Navbar extends React.Component {
               className="navigationItems projects"
               text="Reading List"
               link="/reading-list"
-            />
-            <NavbarLink
-              tipe="desktop"
-              className="navigationItems blog"
-              text="Blog"
-              link="#"
             />
           </div>
           <div

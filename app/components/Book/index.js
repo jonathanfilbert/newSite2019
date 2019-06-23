@@ -31,9 +31,18 @@ class Book extends React.Component {
       <BookContainer>
         <div className="bookContainer">
           <div className={status === 'done' ? 'notDone' : 'done'}>
-            <a style={{ color: 'black' }} href={url} target="_blank">
-              {title}
-            </a>
+            <div>
+              {title}{' '}
+              <a
+                href={url}
+                style={{ color: 'black', textDecoration: 'none' }}
+                target="_blank"
+              >
+                <span role="img" aria-label="link">
+                  🔗
+                </span>
+              </a>
+            </div>
           </div>
           <div className="finishDate">
             Finish date: {status === 'done' ? finishDate : '-'}

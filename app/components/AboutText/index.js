@@ -27,6 +27,12 @@ class AboutText extends React.Component {
               <b> web developer </b> who values minimalism and elegance in
               problem solving in correspondence with my design passion.
             </div>
+            <div className="titleText">Tech stack?</div>
+            <div className="normalText">
+              <div>✅ React - Redux - Component Lifecycle</div>
+              <div>✅ Styled Components - CSS - Flexbox</div>
+              <div>✅ DjangoREST - GraphQL - Hasura</div>
+            </div>
             <div className="titleText">Where are you studying?</div>
             <div className="normalText">
               I prefer to say that I learn most of my knowledge from the

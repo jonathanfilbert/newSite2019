@@ -11,6 +11,16 @@ export const ProjectPageContainer = styled.div`
     align-items: flex-start;
     margin-right: 2em;
   }
+  .legends {
+    display: flex;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+  }
   .projectContainer {
     display: flex;
     margin-left: 1em;
@@ -43,7 +53,7 @@ export const ProjectPageContainer = styled.div`
   }
   .description {
     font-size: 1.3em;
-    font-weight: lighter;
+    font-weight: normal;
   }
   .images {
     max-width: 50%;
@@ -69,6 +79,9 @@ export const ProjectPageContainer = styled.div`
   @media only screen and (max-width: 493px) {
     .projectContainer {
       flex-direction: row;
+    }
+    .legends {
+      font-size: 0.9em;
     }
   }
   @media only screen and (max-width: 903px) {
