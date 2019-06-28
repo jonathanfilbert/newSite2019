@@ -6,7 +6,6 @@ export const AboutTextContainer = styled.div`
     font-size: 1.5em;
     font-weight: bold;
     text-align: left;
-    color: #212121;
   }
   .normalText {
     font-family: 'Helvetica';
@@ -14,16 +13,12 @@ export const AboutTextContainer = styled.div`
     font-weight: normal;
     padding-bottom: 1.5em;
     padding-top: 1em;
-    color: #212121;
   }
   .aboutContainer {
     padding-left: 30em;
     padding-right: 30em;
     padding-top: 3em;
     padding-bottom: 3em;
-  }
-  .link {
-    color: black;
   }
   @media only screen and (max-width: 1125px) {
     .aboutContainer {

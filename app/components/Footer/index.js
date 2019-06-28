@@ -5,6 +5,9 @@
  */
 
 import React from 'react';
+import Toggle from 'react-toggle';
+import 'react-toggle/style.css';
+import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTwitter,
@@ -14,11 +17,27 @@ import {
   faLinkedin,
   faGithub,
 } from '@fortawesome/free-brands-svg-icons';
+import styled from 'styled-components';
+import { toggleTheme } from '../../actions/themeAction';
 import { FooterContainer } from './style';
+
+const ToggleStyle = styled.div``;
+
 class Footer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      darkMode: false,
+    };
+    this.toggleTheme = this.toggleTheme.bind(this);
+  }
+
+  toggleTheme() {
+    this.setState(prevstate => ({
+      ...prevstate,
+      darkMode: !prevstate.darkMode,
+    }));
+    this.props.toggleTheme();
   }
 
   render() {
@@ -76,9 +95,21 @@ class Footer extends React.Component {
             </a>
           </div>
           <div className="separator" />
+          <div className="separator" />
           <div className="footerText">
+            <div>{this.props.darkTheme ? 'more light?' : 'go dark?'}</div>
+            <div className="themeToggle">
+              <label>
+                <ToggleStyle>
+                  <Toggle
+                    onChange={this.toggleTheme}
+                    className="custom-classname"
+                    icons={false}
+                  />
+                </ToggleStyle>
+              </label>
+            </div>
             <div>c/o Jonathan Filbert</div>
-            <div>A WEBSITE</div>
           </div>
         </div>
       </FooterContainer>
@@ -86,4 +117,19 @@ class Footer extends React.Component {
   }
 }
 
-export default Footer;
+function mapStateToProps(state) {
+  return {
+    darkTheme: state.themeToggler.darkMode,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    toggleTheme: () => dispatch(toggleTheme()),
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Footer);

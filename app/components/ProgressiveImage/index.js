@@ -37,8 +37,8 @@ class ProgressiveImage extends React.Component {
 
   render() {
     const { currentImage } = this.state;
-    const alt = this.props.alt;
-    const cName = this.props.cName;
+    const { alt } = this.props;
+    const { cName } = this.props;
 
     return <img className={cName} src={currentImage} alt={alt} />;
   }

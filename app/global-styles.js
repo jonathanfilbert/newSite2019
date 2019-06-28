@@ -23,6 +23,16 @@ const GlobalStyle = createGlobalStyle`
   body {
     height: 100%;
     width: 100%;
+    transition:0.1s;
+    background:${props => (props.darkMode ? '#212121' : '#fcfcfc')};
+    color:${props => (props.darkMode ? '#fcfcfc' : '#212121')};
+  }
+  a{
+    color:${props => (props.darkMode ? '#fcfcfc' : '#212121')}
+  }
+  a:hover {
+    color: ${props => (props.darkMode ? '#222222' : '#fdfdfd')};
+    transition: 0.5s;
   }
 
   body {
@@ -37,12 +47,6 @@ const GlobalStyle = createGlobalStyle`
   #app {
     min-height: 100%;
     min-width: 100%;
-  }
-
-  p,
-  label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    line-height: 1.5em;
   }
 
   .hidden{

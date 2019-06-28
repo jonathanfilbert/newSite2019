@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const BookPageContainer = styled.div`
+  min-height: 100vh;
   font-family: 'Helvetica';
   font-size: 1.5em;
   font-weight: normal;
@@ -11,7 +12,7 @@ export const BookPageContainer = styled.div`
   }
   .title {
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .titleContainer {
     margin-bottom: 2em;

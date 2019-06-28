@@ -13,6 +13,7 @@ class CloseButton extends React.Component {
     super(props);
     this.state = {};
   }
+
   render() {
     return <img style={{ width: '3em' }} alt="Close Button" src={close} />;
   }

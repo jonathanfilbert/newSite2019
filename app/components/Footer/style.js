@@ -2,9 +2,12 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.div`
   bottom: 0;
-  background: #fcfcfc;
   position: relative;
   width: 100%;
+  .themeToggle {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
   .socialWrapper {
     padding-left: 1em;
   }
@@ -24,7 +27,6 @@ export const FooterContainer = styled.div`
   }
   .footerText {
     font-family: 'Helvetica';
-    color: #212121;
     font-weight: bold;
     font-size: 1.2em;
     padding-right: 1em;
@@ -34,7 +36,6 @@ export const FooterContainer = styled.div`
     margin-left: 0.9em;
     font-size: 2em;
     cursor: pointer;
-    color: #212121;
   }
   #twitter:hover {
     color: #1da1f2;

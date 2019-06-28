@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-
+import { Switch, Route } from 'react-router-dom';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Loader from 'react-loader-spinner';
 import { connect } from 'react-redux';
@@ -21,35 +20,37 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Router>
-          <Navbar />
-          <div
-            className={this.props.toggled ? 'hidden' : 'shown'}
-            style={{ minHeight: '100vh' }}
+        <Navbar />
+        <div
+          // eslint-disable-next-line react/prop-types
+          className={this.props.toggled ? 'hidden' : 'shown'}
+          style={{ minHeight: '100vh' }}
+        >
+          <Suspense
+            fallback={
+              <Loader
+                id="app"
+                type="Rings"
+                color="#aaaaaa"
+                height="100"
+                width="100"
+              />
+            }
           >
-            <Suspense
-              fallback={
-                <Loader
-                  id="app"
-                  type="Rings"
-                  color="#333"
-                  height="100"
-                  width="100"
-                />
-              }
-            >
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/projects" component={ProjectPage} />
-                <Route exact path="/reading-list" component={BookPage} />
-                <Route component={NotFoundPage} />?
-              </Switch>
-            </Suspense>
-          </div>
-          <GlobalStyle />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/about" component={About} />
+              <Route exact path="/projects" component={ProjectPage} />
+              <Route exact path="/reading-list" component={BookPage} />
+              <Route component={NotFoundPage} />?
+            </Switch>
+          </Suspense>
+          {
+            // eslint-disable-next-line react/prop-types
+          }
+          <GlobalStyle darkMode={this.props.darkTheme} />
           <Footer />
-        </Router>
+        </div>
       </div>
     );
   }
@@ -58,6 +59,7 @@ class App extends React.Component {
 function mapStateToProps(state) {
   return {
     toggled: state.toggler.toggled,
+    darkTheme: state.themeToggler.darkMode,
   };
 }
 

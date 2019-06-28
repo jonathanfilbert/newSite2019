@@ -12,7 +12,6 @@ export const NavbarContainer = styled.div`
     font-size: 1.5rem;
     padding: 0 !important;
     text-decoration: none;
-    color: #212121;
   }
   #logomain-mobile {
     display: none;
@@ -21,7 +20,6 @@ export const NavbarContainer = styled.div`
     font-size: 1.5rem;
     padding: 0 !important;
     text-decoration: none;
-    color: #212121;
   }
   .mobileMenuItems {
     display: flex;
@@ -30,9 +28,6 @@ export const NavbarContainer = styled.div`
   }
   .navigationItems {
     padding-right: 2em;
-  }
-  .mobileNavigationItems {
-    color: red !important;
   }
   .shown {
     display: flex;
@@ -54,7 +49,6 @@ export const NavbarContainer = styled.div`
     padding: 1em 1em;
     width: 100%;
     top: 0;
-    background: white;
   }
   .navigationMenu {
     margin: 0;
@@ -64,7 +58,6 @@ export const NavbarContainer = styled.div`
 
   .mobileWrapper {
     overflow: hidden;
-    background: white;
     display: flex;
     align-items: center;
     position: absolute;
@@ -114,14 +107,5 @@ export const NavbarContainer = styled.div`
   a {
     text-decoration: none;
     cursor: pointer;
-    color: #bcbcbc;
-  }
-  a:hover {
-    color: black;
-    transition: 0.5s;
-  }
-  a:active {
-    color: black;
-    transition: 0.5s;
   }
 `;

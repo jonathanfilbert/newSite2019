@@ -6,13 +6,20 @@
  */
 
 import React from 'react';
-
+import styled from 'styled-components';
 import NavbarLink from 'components/NavbarLink';
-import Hamburger from 'components/Hamburger';
-import CloseButton from 'components/CloseButton';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { NavbarContainer } from './style';
 import { toggleMenu } from '../../actions/toggleAction';
+
+const FontAwesomeStyling = styled.div`
+  font-size: 1.6em;
+  color: ${props => (props.darkMode ? '#fdfdfd' : '#232323')};
+`;
+
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -40,46 +47,57 @@ class Navbar extends React.Component {
             onClick={this.toggleMenu}
             className="exitContainer"
           >
-            <CloseButton />
+            <FontAwesomeStyling darkMode={this.props.darkTheme}>
+              <FontAwesomeIcon icon={faTimes} />
+            </FontAwesomeStyling>
           </div>
           <div className="mobileMenuItems">
-            <NavbarLink
-              tipe="mobile"
-              className="mobileNavigationItems about"
-              color="leftMenu"
-              text="About"
-              link="/about"
-            />
-            <NavbarLink
-              tipe="mobile"
-              className="mobileNavigationItems resume"
-              color="leftMenu"
-              text="Resume"
-              link="https://drive.google.com/file/d/1ZQt5XV5j1HdK9-wCK6n8lSmOODYdQbi5/view?usp=sharing"
-            />
-            <NavbarLink
-              tipe="mobile"
-              className="mobileNavigationItems projects"
-              color="leftMenu"
-              text="Projects"
-              link="/projects"
-            />
-            <NavbarLink
-              tipe="mobile"
-              className="mobileNavigationItems blog"
-              color="leftMenu"
-              text="Reading List"
-              link="/reading-list"
-            />
+            <div onClick={this.toggleMenu}>
+              <NavbarLink
+                tipe="mobile"
+                className="mobileNavigationItems about"
+                color="leftMenu"
+                text="About"
+                link="/about"
+              />
+            </div>
+            <div onClick={this.toggleMenu}>
+              <NavbarLink
+                href
+                tipe="mobile"
+                className="mobileNavigationItems resume"
+                color="leftMenu"
+                text="Resume"
+                link="https://drive.google.com/file/d/1ZQt5XV5j1HdK9-wCK6n8lSmOODYdQbi5/view"
+              />
+            </div>
+            <div onClick={this.toggleMenu}>
+              <NavbarLink
+                tipe="mobile"
+                className="mobileNavigationItems projects"
+                color="leftMenu"
+                text="Projects"
+                link="/projects"
+              />
+            </div>
+            <div onClick={this.toggleMenu}>
+              <NavbarLink
+                tipe="mobile"
+                className="mobileNavigationItems blog"
+                color="leftMenu"
+                text="Reading List"
+                link="/reading-list"
+              />
+            </div>
           </div>
         </div>
         <div className={!toggled ? 'flex-wrapper' : 'hidden'}>
-          <a id="logomain" href="/">
+          <Link to="/" id="logomain">
             <div>JONATHAN FILBERT</div>
-          </a>
-          <a id="logomain-mobile" href="/">
-            <div>jfl.</div>
-          </a>
+          </Link>
+          <Link to="/" id="logomain-mobile">
+            <div>jofil.</div>
+          </Link>
           <div className="spacer" />
           <div className="navigationMenu">
             <NavbarLink
@@ -90,9 +108,10 @@ class Navbar extends React.Component {
             />
             <NavbarLink
               tipe="desktop"
+              href
               className="navigationItems resume"
               text="Resume"
-              link="https://drive.google.com/file/d/1ZQt5XV5j1HdK9-wCK6n8lSmOODYdQbi5/view?usp=sharing"
+              link="https://drive.google.com/file/d/1ZQt5XV5j1HdK9-wCK6n8lSmOODYdQbi5/view"
             />
             <NavbarLink
               tipe="desktop"
@@ -113,12 +132,20 @@ class Navbar extends React.Component {
             onClick={this.toggleMenu}
             className="burgerContainer"
           >
-            <Hamburger id="hamburgerStyle" />
+            <FontAwesomeStyling darkMode={this.props.darkTheme}>
+              <FontAwesomeIcon icon={faBars} />
+            </FontAwesomeStyling>
           </div>
         </div>
       </NavbarContainer>
     );
   }
+}
+
+function mapStateToProps(state) {
+  return {
+    darkTheme: state.themeToggler.darkMode,
+  };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -128,6 +155,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(Navbar);

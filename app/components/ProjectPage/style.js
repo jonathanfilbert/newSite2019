@@ -52,7 +52,7 @@ export const ProjectPageContainer = styled.div`
     text-align: center;
   }
   .description {
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: normal;
   }
   .images {
@@ -64,6 +64,7 @@ export const ProjectPageContainer = styled.div`
   @media only screen and (max-width: 686px) {
     .description {
       text-align: left;
+      font-size: 1em;
     }
     .imageContainer {
       display: none;
@@ -81,7 +82,7 @@ export const ProjectPageContainer = styled.div`
       flex-direction: row;
     }
     .legends {
-      font-size: 0.9em;
+      font-size: 0.8em;
     }
   }
   @media only screen and (max-width: 903px) {

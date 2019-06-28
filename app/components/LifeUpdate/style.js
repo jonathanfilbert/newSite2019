@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const LifeUpdateContainer = styled.div`
   font-family: 'Helvetica';
-  color: #212121;
   .updateTitle {
     font-weight: normal;
     font-size: 1.8em;

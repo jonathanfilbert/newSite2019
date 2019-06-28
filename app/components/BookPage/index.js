@@ -5,9 +5,9 @@
  */
 
 import React from 'react';
+import axios from 'axios';
 import Book from '../Book';
 import { BookPageContainer } from './style';
-import axios from 'axios';
 
 class BookPage extends React.Component {
   constructor(props) {
@@ -41,10 +41,7 @@ class BookPage extends React.Component {
               I will post my personal commentaries on the books once I'm done
               reading them. If you have other great title suggestions that you
               personally love, or want to discuss about a certain book, please{' '}
-              <a
-                href="mailto:jonathanflisyanto@gmail.com"
-                style={{ color: 'black' }}
-              >
+              <a href="mailto:jonathanflisyanto@gmail.com">
                 shoot me an email.
               </a>
             </div>

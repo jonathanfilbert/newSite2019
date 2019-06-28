@@ -6,7 +6,12 @@
  */
 
 import React from 'react';
+import styled from 'styled-components';
 import { AboutTextContainer } from './style';
+
+const TechStackStyle = styled.div`
+  padding-bottom: 0.3em;
+`;
 
 class AboutText extends React.Component {
   constructor(props) {
@@ -29,9 +34,15 @@ class AboutText extends React.Component {
             </div>
             <div className="titleText">Tech stack?</div>
             <div className="normalText">
-              <div>✅ React - Redux - Component Lifecycle</div>
-              <div>✅ Styled Components - CSS - Flexbox</div>
-              <div>✅ DjangoREST - GraphQL - Hasura</div>
+              <TechStackStyle>
+                <div>✅ React - Redux</div>
+              </TechStackStyle>
+              <TechStackStyle>
+                <div>✅ Styled Components - Rebass</div>
+              </TechStackStyle>
+              <TechStackStyle>
+                <div>✅ DjangoREST - GraphQL - Hasura</div>
+              </TechStackStyle>
             </div>
             <div className="titleText">Where are you studying?</div>
             <div className="normalText">
