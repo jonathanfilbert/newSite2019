@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /**
  *
  * Book
@@ -18,6 +21,7 @@ class Book extends React.Component {
 
   toggleComment = () => {
     this.setState({
+      // eslint-disable-next-line react/no-access-state-in-setstate
       commentShown: !this.state.commentShown,
     });
   };

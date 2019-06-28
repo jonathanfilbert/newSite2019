@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /**
  *
  * Hamburger
@@ -5,7 +6,6 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Hamburg from '../../images/hamburger.svg';
 
@@ -22,6 +22,7 @@ const HamburgerStyling = styled.div`
 class Hamburger extends React.Component {
   render() {
     return (
+      // eslint-disable-next-line jsx-a11y/anchor-is-valid
       <a>
         <HamburgerStyling>
           <img

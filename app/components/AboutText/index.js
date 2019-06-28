@@ -81,7 +81,7 @@ class AboutText extends React.Component {
               <div>⭐️ ️️Learn from mistakes</div>
               <div>⭐️ Creativity and problem solving are inseparable</div>
               <div>
-                ⭐️ Design shouldn't be in the way of accessibility and
+                ⭐️ Design should not be in the way of accessibility and
                 performance
               </div>
               <div>⭐️ Teamwork is awesome</div>
@@ -110,7 +110,7 @@ class AboutText extends React.Component {
               <a href="https://compfest.id" target="_blank" className="link">
                 <u>event website</u>.
               </a>{' '}
-              Apart from that, currently I'm co-building an open source{' '}
+              Apart from that, currently I am co-building an open source{' '}
               <a
                 href="https://github.com/HizkiFW/worshipweb"
                 className="link"
