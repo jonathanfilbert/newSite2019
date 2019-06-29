@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 /**
  *
  * ProjectPage
@@ -6,6 +7,7 @@
 
 import React from 'react';
 import axios from 'axios';
+import { Helmet } from 'react-helmet';
 import { ProjectPageContainer } from './style';
 
 class ProjectPage extends React.Component {
@@ -44,6 +46,14 @@ class ProjectPage extends React.Component {
   render() {
     return (
       <ProjectPageContainer>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Jonathan Filbert | Projects</title>
+          <meta
+            name="description"
+            content="A list of Jonathan Filbert's multi-disciplinary projects from web development, design, and leadership."
+          />
+        </Helmet>
         <div className="WholeContainer">
           <div className="legends">
             <div>

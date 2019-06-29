@@ -20,4 +20,7 @@ export const BookPageContainer = styled.div`
   .bookContainer {
     margin-bottom: 1em;
   }
+  @media only screen and (max-width: 500px) {
+    font-size: 1em;
+  }
 `;

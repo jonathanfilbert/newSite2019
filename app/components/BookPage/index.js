@@ -7,6 +7,7 @@
 
 import React from 'react';
 import axios from 'axios';
+import { Helmet } from 'react-helmet';
 import Book from '../Book';
 import { BookPageContainer } from './style';
 
@@ -31,6 +32,14 @@ class BookPage extends React.Component {
   render() {
     return (
       <BookPageContainer>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Jonathan Filbert | Reading Progress</title>
+          <meta
+            name="description"
+            content="Jonathan Filbert's book-reading project. Honest opinion regaring the book will be posted once I finished reading it."
+          />
+        </Helmet>
         <div className="AllContainer">
           <div className="titleContainer">
             <div className="title">READING LIST</div>
