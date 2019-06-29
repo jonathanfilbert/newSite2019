@@ -14,11 +14,11 @@ function Home() {
     <HomeContainer>
       <Helmet>
         <meta charSet="utf-8" />
+        <title>Jonathan Filbert | Home</title>
         <meta
           name="description"
-          content="My name is Jonathan Filbert and welcome to my website. I am a passionate designer / web developer that use this website as a platform to showcase my work, and personal development. Please take a look around."
+          content="My showcased work and realtime life updates."
         />
-        <title>Jonathan Filbert | Home</title>
       </Helmet>
       <div>
         <SliderComponent />
