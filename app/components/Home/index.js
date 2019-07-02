@@ -14,7 +14,7 @@ function Home() {
     <HomeContainer>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Jonathan Filbert | Home</title>
+        <title>Jonathan Filbert</title>
         <meta
           name="description"
           content="My showcased work and realtime life updates."
