@@ -8,6 +8,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
+import Skeleton from 'react-loading-skeleton';
 import Book from '../Book';
 import { BookPageContainer } from './style';
 
@@ -16,7 +17,22 @@ class BookPage extends React.Component {
     super(props);
     this.state = {
       reviews: [],
+      isLoading: true,
     };
+    this.renderStuffs = this.renderStuffs.bind(this);
+  }
+
+  renderStuffs() {
+    return this.state.reviews.map(review => (
+      <Book
+        key={review.url}
+        status={review.status}
+        title={review.title}
+        notes={review.notes}
+        url={review.url}
+        finishDate={review.finishDate}
+      />
+    ));
   }
 
   componentDidMount() {
@@ -25,6 +41,7 @@ class BookPage extends React.Component {
       .then(response => {
         this.setState({
           reviews: response.data,
+          isLoading: false,
         });
       });
   }
@@ -57,16 +74,23 @@ class BookPage extends React.Component {
             </div>
           </div>
           <div className="bookContainer">
-            {this.state.reviews.map(review => (
-              <Book
-                key={review.url}
-                status={review.status}
-                title={review.title}
-                notes={review.notes}
-                url={review.url}
-                finishDate={review.finishDate}
-              />
-            ))}
+            {this.state.isLoading ? (
+              <div>
+                <Skeleton width={200} height={30} duration={0.4} />
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    paddingTop: '1em',
+                  }}
+                >
+                  <Skeleton width={100} height={15} duration={0.4} />
+                  <Skeleton width={80} height={15} duration={0.4} />
+                </div>
+              </div>
+            ) : (
+              this.renderStuffs()
+            )}
           </div>
         </div>
       </BookPageContainer>

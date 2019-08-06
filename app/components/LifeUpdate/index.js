@@ -6,6 +6,7 @@
 
 import React from 'react';
 import axios from 'axios';
+import Skeleton from 'react-loading-skeleton';
 import { LifeUpdateContainer } from './style';
 
 class LifeUpdate extends React.Component {
@@ -13,7 +14,9 @@ class LifeUpdate extends React.Component {
     super(props);
     this.state = {
       updates: [],
+      isLoading: true,
     };
+    this.renderUpdates = this.renderUpdates.bind(this);
   }
 
   componentDidMount() {
@@ -22,8 +25,18 @@ class LifeUpdate extends React.Component {
       .then(response => {
         this.setState({
           updates: response.data,
+          isLoading: false,
         });
       });
+  }
+
+  renderUpdates() {
+    return this.state.updates.map(updates => (
+      <div key={updates.time} className="flexContainer">
+        <div className="updateTime">{updates.time || <Skeleton />}</div>
+        <div className="updateName">{updates.update || <Skeleton />}</div>
+      </div>
+    ));
   }
 
   render() {
@@ -31,12 +44,36 @@ class LifeUpdate extends React.Component {
       <LifeUpdateContainer>
         <div className="updateContainer">
           <div className="updateTitle">Updates</div>
-          {this.state.updates.map(updates => (
-            <div key={updates.time} className="flexContainer">
-              <div className="updateTime">{updates.time}</div>
-              <div className="updateName">{updates.update}</div>
+          {this.state.isLoading ? (
+            <div>
+              <div className="flexContainer">
+                <div className="updateTime">
+                  <Skeleton width={100} />
+                </div>
+                <div className="updateName">
+                  <Skeleton width={150} />
+                </div>
+              </div>
+              <div className="flexContainer">
+                <div className="updateTime">
+                  <Skeleton width={100} />
+                </div>
+                <div className="updateName">
+                  <Skeleton width={150} />
+                </div>
+              </div>
+              <div className="flexContainer">
+                <div className="updateTime">
+                  <Skeleton width={100} />
+                </div>
+                <div className="updateName">
+                  <Skeleton width={150} />
+                </div>
+              </div>
             </div>
-          ))}
+          ) : (
+            this.renderUpdates()
+          )}
         </div>
       </LifeUpdateContainer>
     );

@@ -8,6 +8,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
+import Skeleton from 'react-loading-skeleton';
 import { ProjectPageContainer } from './style';
 
 class ProjectPage extends React.Component {
@@ -15,7 +16,9 @@ class ProjectPage extends React.Component {
     super(props);
     this.state = {
       portos: [],
+      isLoading: true,
     };
+    this.renderStuffs = this.renderStuffs.bind(this);
   }
 
   emojiPicker(category) {
@@ -39,8 +42,36 @@ class ProjectPage extends React.Component {
       .then(response => {
         this.setState({
           portos: response.data,
+          isLoading: false,
         });
       });
+  }
+
+  renderStuffs() {
+    return (
+      <div>
+        <div className="legends">
+          <div>
+            🎨 = Design | 💻 = Development | 🤝 = social | ✏️ = leadership
+          </div>
+        </div>
+        {this.state.portos.map(portos => (
+          <div key={portos.numberOrder} className="projectContainer">
+            <div className="numberContainer">
+              {this.emojiPicker(portos.category)}
+            </div>
+            <div className="detailContainer">
+              <div className="titleContainer">
+                <a href={portos.url}>
+                  <u>{portos.title}</u>
+                </a>
+              </div>
+              <div className="description">{portos.description}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
   }
 
   render() {
@@ -55,26 +86,55 @@ class ProjectPage extends React.Component {
           />
         </Helmet>
         <div className="WholeContainer">
-          <div className="legends">
-            <div>
-              🎨 = Design | 💻 = Development | 🤝 = social | ✏️ = leadership
-            </div>
-          </div>
-          {this.state.portos.map(portos => (
-            <div key={portos.numberOrder} className="projectContainer">
-              <div className="numberContainer">
-                {this.emojiPicker(portos.category)}
-              </div>
-              <div className="detailContainer">
-                <div className="titleContainer">
-                  <a href={portos.url}>
-                    <u>{portos.title}</u>
-                  </a>
+          {this.state.isLoading ? (
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                width: '100vw',
+              }}
+            >
+              <div className="legends">
+                <div>
+                  <Skeleton width={300} height={25} duration={0.4} />
                 </div>
-                <div className="description">{portos.description}</div>
+              </div>
+              <div className="projectContainer">
+                <div className="numberContainer">
+                  <Skeleton circle width={60} height={60} duration={0.4} />
+                </div>
+                <div className="detailContainer">
+                  <div className="titleContainer">
+                    <Skeleton width={200} height={20} duration={0.4} />
+                  </div>
+                  <div className="description">
+                    <Skeleton width={200} height={25} duration={0.4} />
+                  </div>
+                </div>
+              </div>
+              <div className="legends">
+                <div>
+                  <Skeleton width={300} height={25} duration={0.4} />
+                </div>
+              </div>
+              <div className="projectContainer">
+                <div className="numberContainer">
+                  <Skeleton circle width={60} height={60} duration={0.4} />
+                </div>
+                <div className="detailContainer">
+                  <div className="titleContainer">
+                    <Skeleton width={200} height={20} duration={0.4} />
+                  </div>
+                  <div className="description">
+                    <Skeleton width={200} height={25} duration={0.4} />
+                  </div>
+                </div>
               </div>
             </div>
-          ))}
+          ) : (
+            this.renderStuffs()
+          )}
         </div>
       </ProjectPageContainer>
     );
