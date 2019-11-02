@@ -4,6 +4,7 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import { connect } from 'react-redux';
 import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
+import PropTypes from 'prop-types';
 import Home from 'components/Home';
 import About from 'components/About';
 import ProjectPage from 'components/ProjectPage';
@@ -18,11 +19,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
         <Navbar />
         <div
           // eslint-disable-next-line react/prop-types
-          className={this.props.toggled ? 'hidden' : 'shown'}
+          className="shown content"
           style={{ minHeight: '100vh' }}
         >
           <Switch>
@@ -35,11 +36,14 @@ class App extends React.Component {
           <GlobalStyle darkMode={this.props.darkTheme} />
           <Footer />
         </div>
-      </div>
+      </>
     );
   }
 }
 
+App.propTypes = {
+  darkTheme: PropTypes.any,
+};
 function mapStateToProps(state) {
   return {
     toggled: state.toggler.toggled,

@@ -99,7 +99,7 @@ class Footer extends React.Component {
           <div className="separator" />
           <div className="separator" />
           <div className="footerText">
-            <div>{this.props.darkTheme ? 'more light?' : 'go dark?'}</div>
+            <>{this.props.darkTheme ? 'more light?' : 'go dark?'}</>
             <div className="themeToggle">
               <label>
                 <ToggleStyle>
@@ -111,7 +111,7 @@ class Footer extends React.Component {
                 </ToggleStyle>
               </label>
             </div>
-            <div>c/o Jonathan Filbert</div>
+            <>c/o Jonathan Filbert</>
           </div>
         </div>
       </FooterContainer>

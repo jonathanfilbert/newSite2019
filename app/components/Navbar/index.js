@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/aria-role */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /**
  *
@@ -10,6 +12,7 @@ import styled from 'styled-components';
 import NavbarLink from 'components/NavbarLink';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { NavbarContainer } from './style';
@@ -38,9 +41,14 @@ class Navbar extends React.Component {
 
   render() {
     const { toggled, isMenuShown } = this.state;
+    const { darkTheme } = this.props;
     return (
       <NavbarContainer>
-        <div className={`mobileWrapper ${isMenuShown}`}>
+        <div
+          className={`mobileWrapper ${isMenuShown} ${
+            darkTheme ? 'dark' : 'light'
+          }`}
+        >
           <div
             role="button"
             tabIndex={0}
@@ -91,7 +99,11 @@ class Navbar extends React.Component {
             </div>
           </div>
         </div>
-        <div className={!toggled ? 'flex-wrapper' : 'hidden'}>
+        <div
+          className={`${!toggled ? 'flex-wrapper' : 'hidden'} ${
+            darkTheme ? 'dark' : 'light'
+          }`}
+        >
           <Link to="/" id="logomain">
             <div>JONATHAN FILBERT</div>
           </Link>
@@ -153,6 +165,10 @@ function mapDispatchToProps(dispatch) {
     toggleMenu: () => dispatch(toggleMenu()),
   };
 }
+
+Navbar.propTypes = {
+  darkTheme: PropTypes.any,
+};
 
 export default connect(
   mapStateToProps,

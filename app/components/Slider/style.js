@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 export const SliderContainer = styled.div`
+  .imageContainer {
+    min-width: auto;
+    width: auto;
+  }
   .sliderContainer {
     margin-top: 2em;
     margin-left: 1em;
