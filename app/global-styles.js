@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     height: 100%;
     width: 100%;
-    transition:0.1s;
+    transition: all 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
     background:${props => (props.darkMode ? '#212121' : '#fcfcfc')};
     color:${props => (props.darkMode ? '#fcfcfc' : '#212121')};
   }
@@ -57,6 +57,9 @@ const GlobalStyle = createGlobalStyle`
   .shown{
     top:0;
     transition:0.3s;
+  }
+  .content{
+    margin-top:4em;
   }
 `;
 

@@ -44,11 +44,14 @@ export const NavbarContainer = styled.div`
   }
   .flex-wrapper {
     display: flex;
-    align-items: center;
-    height: 100%;
+    align-items: flex-start;
+    background: white;
     padding: 1em 1em;
     width: 100%;
-    top: 0;
+    /* top: 0; */
+    position: fixed;
+    z-index: 1;
+    backdrop-filter: saturate(180%) blur(20px);
   }
   .navigationMenu {
     margin: 0;
@@ -60,11 +63,14 @@ export const NavbarContainer = styled.div`
     overflow: hidden;
     display: flex;
     align-items: center;
-    position: absolute;
     height: 100vh;
     z-index: 100;
     flex-direction: column;
     justify-content: space-around;
+    background: white;
+    position: fixed;
+    z-index: 1;
+    backdrop-filter: saturate(180%) blur(20px);
   }
   @media only screen and (max-width: 703px) {
     .navigationMenu {
@@ -107,5 +113,11 @@ export const NavbarContainer = styled.div`
   a {
     text-decoration: none;
     cursor: pointer;
+  }
+  .light {
+    background: rgb(255, 255, 255, 0.5);
+  }
+  .dark {
+    background: rgb(0, 0, 0, 0.7);
   }
 `;

@@ -27,6 +27,7 @@ class LifeUpdate extends React.Component {
           updates: response.data,
           isLoading: false,
         });
+        localStorage.setItem('life', response.data);
       });
   }
 

@@ -33,12 +33,40 @@ class SliderComponent extends React.Component {
       });
   }
 
+  renderImage(src) {
+    // TODO
+    return new Promise(resolve => {
+      const img = new Image();
+      img.addEventListener('load', () => {
+        console.log('Selesai');
+        resolve(img);
+      });
+      img.src = src;
+    });
+  }
+
+  renderImageToDom(promises) {
+    const images = [];
+    promises.then(image => images.push(image));
+    return images;
+  }
+
   renderSlides() {
     return this.state.portos.map(portos => (
       <div key={portos.image} className="imageContainer">
         <a target="_blank" href={portos.url}>
+          {/* <div className="slideImage" /> */}
           <img src={portos.image} className="slideImage" alt={portos.title} />
+          {/* {this.renderImage(portos.image).then(image => {
+            console.log(image);
+            return image;
+          })} */}
+          {/* {this.renderImageToDom(this.renderImage(portos.image)).map(image => {
+            console.log(image);
+            return image;
+          })} */}
         </a>
+        ›
         <div className="descriptionContainer">
           <div className="title">{portos.title.toUpperCase()}</div>
           <div className="description">
@@ -52,35 +80,33 @@ class SliderComponent extends React.Component {
   render() {
     return (
       <SliderContainer>
-        <div>
-          <div className="sliderContainer">
-            <Slider
-              autoplay
-              speed={300}
-              slidesToShow={1}
-              slidesToScroll={1}
-              infinite
-              draggable
-              swipeToSlide
-              swipe
-            >
-              {this.state.isLoading ? (
-                <div className="imageContainer">
-                  <Skeleton duration={0.7} height={500} />
-                  <div className="descriptionContainer">
-                    <div className="title">
-                      <Skeleton duration={0.7} width={100} />
-                    </div>
-                    <div className="description">
-                      <Skeleton duration={0.7} width={170} />
-                    </div>
+        <div className="sliderContainer">
+          <Slider
+            autoplay
+            speed={300}
+            slidesToShow={1}
+            slidesToScroll={1}
+            infinite
+            draggable
+            swipeToSlide
+            swipe
+          >
+            {this.state.isLoading ? (
+              <div className="imageContainer">
+                <Skeleton duration={0.7} height={1200} />
+                <div className="descriptionContainer">
+                  <div className="title">
+                    <Skeleton duration={0.7} width={100} />
+                  </div>
+                  <div className="description">
+                    <Skeleton duration={0.7} width={170} />
                   </div>
                 </div>
-              ) : (
-                this.renderSlides()
-              )}
-            </Slider>
-          </div>
+              </div>
+            ) : (
+              this.renderSlides()
+            )}
+          </Slider>
         </div>
       </SliderContainer>
     );
