@@ -76,7 +76,7 @@ class Navbar extends React.Component {
                 className="mobileNavigationItems resume"
                 color="leftMenu"
                 text="Resume"
-                link="https://drive.google.com/file/d/1ZQt5XV5j1HdK9-wCK6n8lSmOODYdQbi5/view"
+                link="https://docs.google.com/document/d/1649Yd8Gk7tBiDDCPHVdDlVk_C9JBZNcN9pPWZx0SdP4/export?format=pdf"
               />
             </div>
             <div onClick={this.toggleMenu}>
@@ -123,7 +123,7 @@ class Navbar extends React.Component {
               href
               className="navigationItems resume"
               text="Resume"
-              link="https://drive.google.com/file/d/1ZQt5XV5j1HdK9-wCK6n8lSmOODYdQbi5/view"
+              link="https://docs.google.com/document/d/1649Yd8Gk7tBiDDCPHVdDlVk_C9JBZNcN9pPWZx0SdP4/export?format=pdf"
             />
             <NavbarLink
               tipe="desktop"

@@ -50,15 +50,14 @@ class ProjectPage extends React.Component {
   renderStuffs() {
     return (
       <div>
-        <div className="legends">
-          <div>
-            🎨 = Design | 💻 = Development | 🤝 = social | ✏️ = leadership
-          </div>
-        </div>
         {this.state.portos.map(portos => (
           <div key={portos.numberOrder} className="projectContainer">
             <div className="numberContainer">
-              {this.emojiPicker(portos.category)}
+              <img
+                alt={portos.title}
+                src={portos.image}
+                className="portoImage"
+              />
             </div>
             <div className="detailContainer">
               <div className="titleContainer">

@@ -12,6 +12,7 @@ export const SliderContainer = styled.div`
     padding-right: 1em;
     max-width: 100%;
     max-height: 100%;
+    min-height: 200px;
   }
   .slideImage {
     max-width: 100%;

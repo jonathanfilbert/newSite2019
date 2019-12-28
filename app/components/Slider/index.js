@@ -38,7 +38,6 @@ class SliderComponent extends React.Component {
     return new Promise(resolve => {
       const img = new Image();
       img.addEventListener('load', () => {
-        console.log('Selesai');
         resolve(img);
       });
       img.src = src;
@@ -55,18 +54,8 @@ class SliderComponent extends React.Component {
     return this.state.portos.map(portos => (
       <div key={portos.image} className="imageContainer">
         <a target="_blank" href={portos.url}>
-          {/* <div className="slideImage" /> */}
           <img src={portos.image} className="slideImage" alt={portos.title} />
-          {/* {this.renderImage(portos.image).then(image => {
-            console.log(image);
-            return image;
-          })} */}
-          {/* {this.renderImageToDom(this.renderImage(portos.image)).map(image => {
-            console.log(image);
-            return image;
-          })} */}
         </a>
-        ›
         <div className="descriptionContainer">
           <div className="title">{portos.title.toUpperCase()}</div>
           <div className="description">

@@ -4,6 +4,10 @@ export const ProjectPageContainer = styled.div`
   font-family: 'Helvetica';
   text-decoration: none;
 
+  .portoImage {
+    max-width: 100%;
+    min-width: 100%;
+  }
   .WholeContainer {
     margin-top: 2em;
     display: flex;
@@ -32,7 +36,7 @@ export const ProjectPageContainer = styled.div`
     flex-direction: row;
   }
   .numberContainer {
-    flex: 0.5;
+    flex: 0.4;
     font-weight: bold;
     font-size: 2em;
     text-align: center;
@@ -41,6 +45,7 @@ export const ProjectPageContainer = styled.div`
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding-left: 1em;
   }
   .titleContainer {
     font-size: 1.3em;
