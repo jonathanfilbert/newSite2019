@@ -97,6 +97,16 @@ class Navbar extends React.Component {
                 link="/reading-list"
               />
             </div>
+            <div onClick={this.toggleMenu}>
+              <NavbarLink
+                href
+                tipe="mobile"
+                className="mobileNavigationItems resume"
+                color="leftMenu"
+                text="Blog 🙃"
+                link="https://blog.jofil.tech"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -136,6 +146,13 @@ class Navbar extends React.Component {
               className="navigationItems projects"
               text="Reading List"
               link="/reading-list"
+            />
+            <NavbarLink
+              tipe="desktop"
+              href
+              className="navigationItems resume"
+              text="Blog 🙃"
+              link="https://blog.jofil.tech"
             />
           </div>
           <div
